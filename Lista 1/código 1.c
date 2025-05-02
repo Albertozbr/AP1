@@ -1,14 +1,35 @@
 #include <stdio.h>
+#include<locale.h>
+
 
 int main() {
-    float temperatura_celsius, temperatura_fahrenheit;
+    setlocale(LC_ALL, "Portuguese");
+    int opcao;
+ {
+        // Exibe o menu
 
-    printf("Digite a temperatura em graus Celsius: ");
-    scanf("%f", &temperatura_celsius);
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
 
-    temperatura_fahrenheit = (temperatura_celsius * 9/5) + 32;
+        switch(opcao) {
+            case 1: {
+                printf("exercicio 1");
+                break;
+            }
+            case 2: {
+                printf("exercicio 2");
+                break;
+            }
+            case 3: {
+                printf("exercico 3");
+                break;
+            }
 
-    printf("A temperatura em Fahrenheit e: %.2f\n", temperatura_fahrenheit);
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    }
 
     return 0;
 }
+
